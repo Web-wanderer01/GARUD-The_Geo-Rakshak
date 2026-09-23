@@ -1,0 +1,111 @@
+export const roads = [
+  {
+    id: 'RD-001',
+    name: 'NH-6 (Shillong - Cherrapunji)',
+    type: 'road',
+    from: 'Shillong',
+    to: 'Cherrapunji',
+    state: 'Meghalaya',
+    status: 'Fully Blocked',
+    lastUpdated: '2026-09-14T08:00:00+05:30',
+    details: 'Major debris flow at km 42. BRO clearance estimated 48-72 hours. Alternate route via Mawsynram.',
+    criticality: 'high',
+    lengthKm: 54,
+    dataSource: 'Satellite',
+    confidence: 'High',
+    disruptionRisk: 95
+  },
+  {
+    id: 'BR-001',
+    name: 'Saraighat Bridge',
+    type: 'bridge',
+    from: 'Guwahati North',
+    to: 'Guwahati South',
+    state: 'Assam',
+    status: 'Open',
+    lastUpdated: '2026-09-14T10:00:00+05:30',
+    details: 'Normal traffic. Water level approaching warning mark.',
+    criticality: 'low',
+    lengthKm: 1.5,
+    dataSource: 'Sensor',
+    confidence: 'High',
+    disruptionRisk: 25
+  },
+  {
+    id: 'RD-002',
+    name: 'NH-54 (Haflong - Silchar)',
+    type: 'road',
+    from: 'Haflong',
+    to: 'Silchar',
+    state: 'Assam',
+    status: 'Fully Blocked',
+    lastUpdated: '2026-09-13T15:00:00+05:30',
+    details: 'Multiple slope failures along 15km stretch.',
+    criticality: 'high',
+    lengthKm: 120,
+    dataSource: 'Field Report',
+    confidence: 'Medium',
+    disruptionRisk: 88
+  },
+  {
+    id: 'BR-002',
+    name: 'Bogibeel Bridge',
+    type: 'bridge',
+    from: 'Dibrugarh',
+    to: 'Dhemaji',
+    state: 'Assam',
+    status: 'Partially Blocked',
+    lastUpdated: '2026-09-14T12:00:00+05:30',
+    details: 'Heavy vehicle restrictions due to strong crosswinds and localized flooding at approach road.',
+    criticality: 'medium',
+    lengthKm: 4.9,
+    dataSource: 'Manual',
+    confidence: 'High',
+    disruptionRisk: 65
+  },
+  {
+    id: 'RD-003',
+    name: 'NH-37 (Tawang Road via Sela)',
+    type: 'road',
+    from: 'Tezpur',
+    to: 'Tawang',
+    state: 'Arunachal Pradesh',
+    status: 'Fully Blocked',
+    lastUpdated: '2026-09-14T09:30:00+05:30',
+    details: 'Snow and debris at Sela Pass. ETA for reopening: 5-7 days.',
+    criticality: 'high',
+    lengthKm: 320,
+    dataSource: 'Sensor',
+    confidence: 'High',
+    disruptionRisk: 92
+  },
+  {
+    id: 'RD-004',
+    name: 'NH-29 (Kohima - Imphal)',
+    type: 'road',
+    from: 'Kohima',
+    to: 'Imphal',
+    state: 'Nagaland / Manipur',
+    status: 'Partially Blocked',
+    lastUpdated: '2026-09-14T12:00:00+05:30',
+    details: 'Single-lane traffic at km 68 due to slope repair.',
+    criticality: 'medium',
+    lengthKm: 140,
+    dataSource: 'Field Report',
+    confidence: 'Low',
+    disruptionRisk: 55
+  }
+];
+
+export const ROAD_STATUS_CONFIG = {
+  'Open': { color: '#22c55e', bgClass: 'bg-green-100 text-green-800', icon: '✅' },
+  'Partially Blocked': { color: '#f97316', bgClass: 'bg-orange-100 text-orange-800', icon: '⚠️' },
+  'Fully Blocked': { color: '#ef4444', bgClass: 'bg-red-100 text-red-800', icon: '🚫' },
+};
+
+export const roadStats = {
+  total: roads.length,
+  open: roads.filter((r) => r.status === 'Open').length,
+  partiallyBlocked: roads.filter((r) => r.status === 'Partially Blocked').length,
+  fullyBlocked: roads.filter((r) => r.status === 'Fully Blocked').length,
+};
