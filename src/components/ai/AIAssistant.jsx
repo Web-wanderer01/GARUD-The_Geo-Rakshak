@@ -27,11 +27,11 @@ const RECENT_OPS = [
 /* ─── Gemini REST helper ──────────────────────────────────────────── */
 // Working models confirmed with this key — fastest first
 const MODELS = [
-  'gemini-3.5-flash-lite',    // 722ms ✅ fastest
-  'gemini-flash-lite-latest', // 733ms ✅ fallback
-  'gemini-3.6-flash',         // standard fallback
-  'gemini-3.7-flash',         // extended fallback
-  'gemini-3.8-flash',         // last resort
+  'gemini-2.5-flash',
+  'gemini-2.0-flash',
+  'gemini-1.5-flash',
+  'gemini-1.5-pro',
+  'gemini-1.0-pro',
 ];
 
 const API_BASE = 'https://generativelanguage.googleapis.com/v1beta/models';

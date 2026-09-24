@@ -35,7 +35,7 @@ const RESOURCES = [
   { name:'IAF C-130J',        icon:'✈️', total:2,  deployed:1, avail:1 },
 ];
 
-const GEMINI_MODELS = ['gemini-3.5-flash-lite','gemini-flash-lite-latest','gemini-3.6-flash'];
+const GEMINI_MODELS = ['gemini-2.5-flash','gemini-2.0-flash','gemini-1.5-flash'];
 
 export default function CoordinationPage() {
   const [resources, setResources] = useState(RESOURCES.map(r => ({ ...r })));
